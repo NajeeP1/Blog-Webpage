@@ -1,0 +1,19 @@
+header {
+    border: 1px solid red;
+    grid-area: hd;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+
+
+
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    font-size: 22px;
+}

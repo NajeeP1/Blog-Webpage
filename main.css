@@ -1,0 +1,42 @@
+@import './headerblogpost.css';
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+.layout {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 200px auto;
+    grid-template-rows: 80px auto 80px;
+    grid-template-areas:
+        'hd hd'
+        'sd mn'
+        'ft ft';
+}
+
+
+main {
+    border: 1px solid red;
+    grid-area: mn;
+}
+
+footer {
+    border: 1px solid red;
+    grid-area: ft;
+}
+
+@media screen and (max-width: 425px) {
+    .layout {
+        grid-template-rows: 100px auto 80px;
+    }
+
+    header {
+        flex-direction: column;
+    }
+
+}

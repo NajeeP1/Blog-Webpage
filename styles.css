@@ -1,0 +1,70 @@
+@import './header.css';
+@import "./layout.css";
+@import './card.css';
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    PADDING: 0;
+
+}
+
+
+
+.sidebar {
+    border: 1px solid red;
+    grid-area: sd;
+}
+
+main {
+    border: 1px solid red;
+    grid-area: mn;
+}
+
+footer {
+    border: 1px solid red;
+    grid-area: ft;
+}
+
+@media screen and (max-width: 425px) {
+    .layout {
+        grid-template-rows: 100px auto auto 80px;
+        grid-template-columns: auto;
+        grid-template-areas:
+            "hd"
+            "sd"
+            "mn"
+            "ft"
+    }
+
+
+    header {
+        flex-direction: column;
+    }
+
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 300px;
+
+}
+
+
+.card {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media screen and (max-width: 425px; ) {
+    .grid-container {
+        grid-template-columns: auto;
+
+    }
+}
